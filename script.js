@@ -2,20 +2,17 @@
 // each item has a name, description, price, and an image filename
 const menu = {
   starters: [
-    { name: "Samosa", desc: "Seared halloumi, hazelnut duqqa, wild honey.", price: "KSh 850", img: "images/soamosa.jpg" },
-    { name: "Chapati", desc: "Silky jute-leaf soup, garlic-coriander taqleya, crisp pita.", price: "KSh 700", img: "dish-molokhia-veloute.jpg" },
-    { name: "Mandazi", desc: "Lamb, spinach-feta and spiced lentil pastries.", price: "KSh 900", img: "dish-sambousek-trio.jpg" },
+    { name: "Samosa", desc: "Crispy pastry filled with spiced meat, onion and garlic, served with a tangy dipping sauce.", price: "KSh 350", img: "soamosa.jpg" },
+    { name: "Chapati", desc: "Soft, flaky flatbread, perfect for scooping up stews or enjoying with a cup of spiced tea.", price: "KSh 150", img: "chapati.jpg" },
+    { name: "Mandazi", desc: "Lightly sweet, pillowy fried dough spiced with cardamom - a classic East African favourite.", price: "KSh 200", img: "mandazi.jpg" },
   ],
   mains: [
-    { name: "Nile Perch Sayadeya", desc: "Pan-roasted perch, caramelised onion rice, cumin broth.", price: "KSh 2,400", img: "dish-nile-perch-sayadeya.jpg" },
-    { name: "Hamam Mahshi", desc: "Roast pigeon stuffed with freekeh, pomegranate glaze.", price: "KSh 2,800", img: "dish-hamam-mahshi.jpg" },
-    { name: "Kofta Royale", desc: "Charcoal-grilled beef kofta, smoked tomato, tahini.", price: "KSh 1,950", img: "dish-kofta-royale.jpg" },
-    { name: "Koshari Deluxe", desc: "The Cairo street classic, refined - crispy shallots, aged vinegar.", price: "KSh 1,400", img: "dish-koshari-deluxe.jpg" },
+    { name: "Somali Breakfast", desc: "Soft canjeero pancake bread served with a rich stew, honey and butter, paired with spiced tea.", price: "KSh 600", img: "somali-breakfast.jpg" },
   ],
   desserts: [
-    { name: "Om Ali", desc: "Warm bread pudding, pistachio, clotted cream.", price: "KSh 750", img: "dish-om-ali.jpg" },
-    { name: "Basbousa & Rose", desc: "Semolina cake, rose syrup, candied orange.", price: "KSh 700", img: "dish-basbousa-rose.jpg" },
-    { name: "Cardamom Affogato", desc: "Turkish coffee poured over cardamom ice cream.", price: "KSh 650", img: "dish-cardamom-affogato.jpg" },
+    { name: "Malawah", desc: "Flaky, layered pancake, lightly sweetened and often served warm with honey.", price: "KSh 350", img: "malawah.jpg" },
+    { name: "Doolsho", desc: "Soft cardamom-spiced sponge cake, a favourite at celebrations.", price: "KSh 400", img: "doolsho.jpg" },
+    { name: "Xalwo", desc: "Traditional Somali halwa - a sticky, fragrant sweet made with cardamom, nutmeg and ghee.", price: "KSh 450", img: "xalwo.jpg" },
   ],
 };
 

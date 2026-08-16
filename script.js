@@ -7,11 +7,14 @@ const menu = {
     { name: "Mandazi", desc: "Lightly sweet, pillowy fried dough spiced with cardamom - a classic East African favourite.", price: "KSh 200", img: "mandazi.jpg" },
     { name: "Ta'ameya", desc: "Egyptian-style falafel - crispy fava bean fritters with herbs, served with tahini sauce.", price: "KSh 400", img: "taameya.jpg" },
     { name: "Bruschetta", desc: "Toasted bread topped with fresh tomato, basil and olive oil.", price: "KSh 450", img: "bruschetta.jpg" },
+    { name: "Caesar's Salad", desc: "Crisp romaine, parmesan, croutons and creamy Caesar dressing.", price: "KSh 500", img: "caesars-salad.jpg" },
   ],
   mains: [
     { name: "Somali Breakfast", desc: "Soft canjeero pancake bread served with a rich stew, honey and butter, paired with spiced tea.", price: "KSh 600", img: "somali-breakfast.jpg" },
     { name: "Koshari", desc: "Egypt's beloved street food classic - lentils, rice and macaroni topped with crispy onions and spiced tomato sauce.", price: "KSh 550", img: "koshari.jpg" },
     { name: "Chicken Alfredo", desc: "Grilled chicken breast tossed in a creamy parmesan pasta sauce.", price: "KSh 900", img: "chicken-alfredo.jpg" },
+    { name: "Caribbean Jerk Chicken", desc: "Grilled chicken marinated in bold jerk spices, served with rice and vegetables.", price: "KSh 950", img: "caribbean-jerk-chicken.jpg" },
+    { name: "Philly Cheese Steak Sandwich", desc: "Sliced beef, melted cheese and grilled peppers in a toasted roll.", price: "KSh 850", img: "philly-cheese-steak.jpg" },
   ],
   desserts: [
     { name: "Malawah", desc: "Flaky, layered pancake, lightly sweetened and often served warm with honey.", price: "KSh 350", img: "malawah.jpg" },

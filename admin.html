@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Qahira Cuisine — Reservations (Admin)</title>
+  <style>
+    body { font-family: sans-serif; background:#0e1b2e; color:#fbf6ec; padding:2rem; }
+    h1 { color:#c9a24b; font-weight:400; }
+    table { border-collapse: collapse; width:100%; margin-top:1rem; }
+    th, td { border:1px solid #2c405f; padding:.55rem .8rem; text-align:left; font-size:.9rem; }
+    th { background:#16263f; color:#e4c87f; }
+    tr:nth-child(even) { background:#132238; }
+    a { color:#e4c87f; }
+    .empty { opacity:.7; margin-top:1rem; }
+  </style>
+</head>
+<body>
+  <h1>✦ Qahira Cuisine — Reservations</h1>
+  <p><a href="index.html">← Back to site</a></p>
+  <div id="out"></div>
+
+  <script>
+    const items = JSON.parse(localStorage.getItem("qahira_reservations")) || [];
+    const out = document.getElementById("out");
+
+    if (items.length === 0) {
+      out.innerHTML = '<p class="empty">No reservations yet — submit the form on the main site first (same browser).</p>';
+    } else {
+      const rows = items.map(r => `
+        <tr>
+          <td>${r.id}</td><td>${r.type || "table"}</td><td>${r.name}</td>
+          <td>${r.contact}</td><td>${r.date}</td><td>${r.guests || "-"}</td>
+          <td>${r.room || "—"}</td><td>${r.notes || "—"}</td>
+        </tr>`).join("");
+      out.innerHTML = `
+        <table>
+          <tr><th>#</th><th>Type</th><th>Name</th><th>Contact</th>
+          <th>Date</th><th>Guests</th><th>Suite</th><th>Notes</th></tr>
+          ${rows}
+        </table>`;
+    }
+  </script>
+</body>
+</html>

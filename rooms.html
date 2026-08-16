@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rooms — Qahira Cuisine</title>
+  <meta name="description" content="Boutique accommodation at Qahira Cuisine." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Jost:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="nav" id="nav">
+    <a href="index.html" class="nav-brand">
+      <span class="star-mark" aria-hidden="true">✦</span>
+      Qahira <em>Cuisine</em>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="dining.html">Dining</a>
+      <a href="rooms.html" class="current">Rooms</a>
+      <a href="experience.html">Experience</a>
+      <a href="reserve.html" class="btn btn-gold">Reserve</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+  <section class="page-banner">
+    <p class="eyebrow">Accommodation</p>
+    <h1>Rest Like Royalty</h1>
+    <p class="lede" style="margin:1rem auto 0">Twelve suites arranged around a lantern-lit courtyard, each named after a Cairo landmark.</p>
+    <p class="breadcrumb"><a href="index.html">Home</a> / Rest Like Royalty</p>
+  </section>
+
+  <section class="section" id="rooms">
+    <div class="rooms-grid">
+      <article class="room-card reveal">
+        <div class="room-visual" data-glyph="۞">
+          <img src="images/room-almuizz.jpg" alt="Al-Muizz Suite" onerror="this.remove()" />
+        </div>
+        <div class="room-body">
+          <h3>Al-Muizz Suite</h3>
+          <p>Courtyard view · king bed · mashrabiya balcony · breakfast included.</p>
+          <div class="room-foot">
+            <span class="price">KSh 14,500 <small>/ night</small></span>
+            <button class="btn btn-line book-room" data-room="Al-Muizz Suite">Book</button>
+          </div>
+        </div>
+      </article>
+      <article class="room-card reveal">
+        <div class="room-visual" data-glyph="✦">
+          <img src="images/room-zamalek.jpg" alt="Zamalek Room" onerror="this.remove()" />
+        </div>
+        <div class="room-body">
+          <h3>Zamalek Room</h3>
+          <p>Garden view · queen bed · writing desk · rainfall shower.</p>
+          <div class="room-foot">
+            <span class="price">KSh 9,800 <small>/ night</small></span>
+            <button class="btn btn-line book-room" data-room="Zamalek Room">Book</button>
+          </div>
+        </div>
+      </article>
+      <article class="room-card reveal">
+        <div class="room-visual" data-glyph="۩">
+          <img src="images/room-nile-terrace.jpg" alt="Nile Terrace Suite" onerror="this.remove()" />
+        </div>
+        <div class="room-body">
+          <h3>Nile Terrace Suite</h3>
+          <p>Top floor · private terrace · dinner for two on arrival night.</p>
+          <div class="room-foot">
+            <span class="price">KSh 21,000 <small>/ night</small></span>
+            <button class="btn btn-line book-room" data-room="Nile Terrace Suite">Book</button>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+  <footer class="footer" id="contact">
+    <div class="footer-grid">
+      <div>
+        <p class="nav-brand"><span class="star-mark">✦</span> Qahira <em>Cuisine</em></p>
+        <p class="muted">Fine dining &amp; accommodation.<br />Open daily, 12:00 — late.</p>
+      </div>
+      <div>
+        <h4>Visit</h4>
+        <p class="muted">Riverside Lane, Old Town<br />+254 700 000 000<br />hello@qahiracuisine.com</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <p class="muted"><a href="dining.html" style="color:inherit">Dining</a><br />
+        <a href="rooms.html" style="color:inherit">Rooms</a><br />
+        <a href="reserve.html" style="color:inherit">Reserve</a></p>
+      </div>
+    </div>
+    <p class="footer-line muted">© 2026 Qahira Cuisine · Built for the Web Dev Hackathon</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

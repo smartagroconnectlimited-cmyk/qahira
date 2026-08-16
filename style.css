@@ -1,0 +1,612 @@
+/* Qahira Cuisine website styles */
+
+:root {
+  --ink: #0e1b2e;
+  --ink2: #16263f;
+  --brass: #c9a24b;
+  --brass2: #e4c87f;
+  --sand: #f3ead9;
+  --cream: #fbf6ec;
+  --muted: #8fa0b8;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Jost", sans-serif;
+  background: var(--ink);
+  color: var(--cream);
+  line-height: 1.6;
+  font-weight: 300;
+}
+
+h1, h2, h3, h4 {
+  font-family: "Marcellus", serif;
+  font-weight: 400;
+  line-height: 1.15;
+}
+
+h1 { font-size: clamp(2.4rem, 6vw, 4.2rem); }
+h2 { font-size: clamp(1.8rem, 4vw, 2.6rem); }
+h3 { font-size: 1.25rem; }
+
+.eyebrow {
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-size: 12px;
+  color: var(--brass);
+  margin-bottom: 15px;
+}
+
+.lede {
+  max-width: 46ch;
+  margin: 12px auto 0;
+  opacity: 0.85;
+}
+
+.muted { color: var(--muted); }
+.star-mark { color: var(--brass); }
+
+/* navbar */
+.nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 40px;
+  background: rgba(14,27,46,0.92);
+  backdrop-filter: blur(8px);
+}
+
+.nav.scrolled {
+  box-shadow: 0 2px 20px rgba(0,0,0,0.35);
+}
+
+.nav-brand {
+  font-family: "Marcellus", serif;
+  font-size: 21px;
+  color: var(--cream);
+  text-decoration: none;
+}
+
+.nav-brand em {
+  color: var(--brass);
+  font-style: normal;
+}
+
+.nav-links {
+  display: flex;
+  gap: 26px;
+  align-items: center;
+}
+
+.nav-links a {
+  color: var(--cream);
+  text-decoration: none;
+  font-size: 15px;
+  padding-bottom: 3px;
+  border-bottom: 1px solid transparent;
+}
+
+.nav-links a:hover {
+  color: var(--brass2);
+}
+
+.nav-links a.current {
+  color: var(--brass2);
+  border-bottom-color: var(--brass);
+}
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--cream);
+  margin: 5px 0;
+}
+
+/* buttons */
+.btn {
+  display: inline-block;
+  padding: 13px 27px;
+  border-radius: 999px;
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: 0.25s;
+}
+
+.btn-gold {
+  background: var(--brass);
+  color: var(--ink);
+  font-weight: 500;
+}
+
+.btn-gold:hover {
+  background: var(--brass2);
+}
+
+.btn-ghost {
+  border-color: rgba(251,246,236,0.4);
+  color: var(--cream);
+}
+
+.btn-ghost:hover {
+  border-color: var(--brass);
+  color: var(--brass2);
+}
+
+.btn-line {
+  background: none;
+  border-color: var(--ink);
+  color: var(--ink);
+  padding: 9px 20px;
+}
+
+.btn-line:hover {
+  background: var(--ink);
+  color: var(--brass2);
+}
+
+.btn-wide {
+  width: 100%;
+  border: 0;
+}
+
+/* hero section on homepage */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 110px 20px 0;
+  background-color: var(--ink);
+  background-image: url('images/hero.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(14,27,46,0.55), rgba(14,27,46,0.85) 70%, var(--ink));
+}
+
+.hero-arch, .hero-strip {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-arch {
+  border: 1.5px solid rgba(201,162,75,0.55);
+  border-bottom: 0;
+  border-radius: 50% 50% 0 0 / 38% 38% 0 0;
+  padding: 60px 40px 40px;
+  max-width: 780px;
+}
+
+.hero-sub {
+  max-width: 48ch;
+  margin: 18px auto 0;
+  color: var(--muted);
+}
+
+.hero-actions {
+  margin-top: 35px;
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.hero-strip {
+  margin-top: auto;
+  width: 100%;
+  display: flex;
+  gap: 22px;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 22px 16px;
+  border-top: 1px solid rgba(201,162,75,0.25);
+  font-size: 12px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* banner used on the inner pages (not the homepage) */
+.page-banner {
+  padding: 140px 20px 55px;
+  text-align: center;
+  background: var(--ink);
+  border-bottom: 1px solid rgba(201,162,75,0.2);
+}
+
+.breadcrumb {
+  margin-top: 12px;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.breadcrumb a {
+  color: var(--brass2);
+  text-decoration: none;
+}
+
+/* the 4 link cards on the homepage */
+.home-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+}
+
+.home-link-card {
+  background: var(--ink2);
+  border: 1px solid rgba(201,162,75,0.18);
+  border-radius: 14px;
+  padding: 28px 24px;
+  text-decoration: none;
+  color: var(--cream);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.home-link-card:hover {
+  border-color: var(--brass);
+}
+
+.home-link-card .glyph {
+  font-size: 26px;
+  color: var(--brass);
+}
+
+.home-link-card p {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.home-link-card .go {
+  color: var(--brass2);
+  font-size: 13px;
+  text-transform: uppercase;
+  margin-top: auto;
+}
+
+/* general section spacing */
+.section {
+  padding: 90px 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.section-sand {
+  max-width: none;
+  background: var(--sand);
+  color: var(--ink);
+}
+
+.section-sand .lede {
+  color: #4a4234;
+}
+
+.section-sand > * {
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-head {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+/* menu page */
+.menu-tabs, .form-switch {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 35px;
+  flex-wrap: wrap;
+}
+
+.tab {
+  background: none;
+  border: 1px solid rgba(201,162,75,0.4);
+  color: inherit;
+  padding: 8px 22px;
+  border-radius: 999px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.tab.active, .tab:hover {
+  background: var(--brass);
+  border-color: var(--brass);
+  color: var(--ink);
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: 18px;
+}
+
+.dish {
+  background: var(--ink2);
+  border: 1px solid rgba(201,162,75,0.18);
+  border-radius: 14px;
+  padding: 22px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.dish-photo {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 5px;
+}
+
+.dish-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 15px;
+}
+
+.dish h3 { color: var(--brass2); }
+.dish .price { font-family: "Marcellus", serif; }
+.dish p { font-size: 14px; color: var(--muted); }
+
+/* rooms page */
+.rooms-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 22px;
+}
+
+.room-card {
+  background: var(--cream);
+  border-radius: 14px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.room-visual {
+  height: 170px;
+  display: grid;
+  place-items: center;
+  position: relative;
+  background: linear-gradient(135deg, var(--ink) 0%, #24395c 100%);
+}
+
+.room-visual::before {
+  content: attr(data-glyph);
+  font-size: 48px;
+  color: var(--brass);
+  opacity: 0.9;
+}
+
+.room-visual img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.room-body {
+  padding: 20px 22px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+
+.room-body p {
+  font-size: 14px;
+  color: #5a5142;
+}
+
+.room-foot {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.price {
+  font-family: "Marcellus", serif;
+  font-size: 17px;
+}
+
+.price small {
+  font-family: "Jost", sans-serif;
+  color: #8a7d61;
+}
+
+/* experience page timeline */
+.evening {
+  list-style: none;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.evening li {
+  display: flex;
+  gap: 20px;
+  padding: 22px 0;
+  border-bottom: 1px solid rgba(201,162,75,0.2);
+}
+
+.evening li:last-child {
+  border-bottom: 0;
+}
+
+.evening-time {
+  font-family: "Marcellus", serif;
+  color: var(--brass);
+  font-size: 20px;
+  min-width: 55px;
+}
+
+.evening p {
+  color: var(--muted);
+  font-size: 15px;
+}
+
+/* reservation form */
+.form-card {
+  background: var(--cream);
+  border-radius: 14px;
+  padding: 35px;
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.form-card .tab {
+  border-color: rgba(14,27,46,0.35);
+  color: var(--ink);
+}
+
+.form-card .tab.active, .form-card .tab:hover {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--brass2);
+}
+
+form label {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 13px;
+  text-transform: uppercase;
+  color: #6b5f49;
+  margin-bottom: 16px;
+}
+
+form input, form select, form textarea {
+  font-family: "Jost", sans-serif;
+  font-size: 16px;
+  color: var(--ink);
+  padding: 11px 14px;
+  border: 1px solid #d8cbb0;
+  border-radius: 8px;
+  background: #fff;
+}
+
+form input:focus, form select:focus, form textarea:focus {
+  outline: 2px solid var(--brass);
+  border-color: var(--brass);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.form-status {
+  margin-top: 14px;
+  text-align: center;
+  font-size: 15px;
+  min-height: 22px;
+}
+
+.form-status.ok { color: #2e7d4f; }
+.form-status.err { color: #b3402e; }
+
+/* footer */
+.footer {
+  border-top: 1px solid rgba(201,162,75,0.25);
+  padding: 45px 40px 30px;
+}
+
+.footer-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+}
+
+.footer h4 {
+  color: var(--brass2);
+  margin-bottom: 8px;
+}
+
+.footer-line {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 13px;
+}
+
+/* fade-in effect when scrolling down the page */
+.reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.in {
+  opacity: 1;
+  transform: none;
+}
+
+/* mobile styles */
+@media (max-width: 760px) {
+  .nav-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    position: fixed;
+    inset: 0;
+    background: rgba(14,27,46,0.97);
+    flex-direction: column;
+    justify-content: center;
+    font-size: 19px;
+    transform: translateX(100%);
+    transition: 0.3s;
+  }
+
+  .nav-links.open {
+    transform: none;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+}
